@@ -8,10 +8,10 @@ npm install ys-webrtc-sdk-ui --save
 ```
 初始化sdk，渲染UI组件。
 ```js
-import YSWebRTCUI from 'ys-webrtc-sdk-ui';
+import { init } from 'ys-webrtc-sdk-ui';
 const container = document.getElementById('container');
 // 初始化
-YSWebRTCUI.init(container, {
+init(container, {
     pbxUrl: 'https://192.168.1.1:8088', // 或者fqdn地址
     secret: '由open api创建的签名',
     username: '分机号',
