@@ -35,8 +35,6 @@ const { phone, pbx, destroy } = data;
 <link rel="stylesheet" href="ys-webrtc-sdk-ui.css">
 
 <div id="test"></div>
-<!-- 加载声音文件 -->
-<script src="./sound.js"></script>
 <!-- 加载UI集成 SDK -->
 <script src="./ys-webrtc-sdk-ui.js"></script>
 <script>
