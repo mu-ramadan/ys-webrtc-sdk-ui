@@ -8,6 +8,7 @@ npm install ys-webrtc-sdk-ui --save
 ```
 初始化sdk，渲染UI组件。
 ```js
+import 'ys-webrtc-sdk-ui/lib/ys-webrtc-sdk-ui.css';
 import { init } from 'ys-webrtc-sdk-ui';
 const container = document.getElementById('container');
 // 初始化
