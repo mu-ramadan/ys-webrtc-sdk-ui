@@ -77,7 +77,7 @@ The `init` function requires two parameters:
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
 | username | string | Yes | Extension number. |
-| secret | string | Yes | Login signature, which can be obtained using OPEN API. For more information, see [Obtain a Server-side Signature](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core/docs/CreateSign.md). |
+| secret | string | Yes | Login signature, which can be obtained using OPEN API. For more information, see [Obtain a Server-side Signature](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core/blob/main/docs/CreateSign.md). |
 | pbxURL | URL \| string | Yes | The URL for accessing your PBX system, including the transfer protocol and the port number.<br />For example, https://192.168.1.1:8088 or https://xx.xxx.com. |
 | enableLog | boolean | No | Whether to enable log output and report error logs to PBX. This feature is enabled by default. |
 | reRegistryPhoneTimes | number | No | Define the number of attempts to reconnect to the SIP service. By default, it is unlimited. |

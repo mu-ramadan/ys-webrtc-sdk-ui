@@ -4,7 +4,7 @@
 
 本项目抽离了 PBX web 通话组件 ui 及通话逻辑，使用集成好的ui组件无需额外编码。
 
-通话核心逻辑基于 [ys-webrtc-sdk-core](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core#readme)集成。
+通话核心逻辑基于 [ys-webrtc-sdk-core](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core/blob/main/README_zh-CN.md)集成。
 
 ## Install
 
@@ -74,7 +74,7 @@ init 函数需要两个参数 container和rtcOption。
 | 属性名 | 类型 | 是否必填 | 说明 |
 | --- | --- | --- | --- |
 | username | string | 必填 | 分机号。 |
-| secret | string | 必填 | 登录签名，通过 OPEN API 获取，[获取签名流程](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core/docs/CreateSign.md)。 |
+| secret | string | 必填 | 登录签名，通过 OPEN API 获取，[获取签名流程](https://github.com/Yeastar-PBX/ys-webrtc-sdk-core/blob/main/docs/zh-CN/CreateSign.md)。 |
 | pbxURL | URL \| string | 必填 | PBX 的访问地址可以为 URL 对象，地址要求包含协议以及端口如：https://192.168.1.1:8088或 https://xx.xxx.com。 |
 | enableLog | boolean | 可选 | 是否开启日志输出以及错误日志上报至 PBX，默认开启。 |
 | reRegistryPhoneTimes | number | 可选 | 尝试重新连接 sip 服务次数，默认无限制。 |
