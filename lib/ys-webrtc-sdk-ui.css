@@ -106,6 +106,8 @@
   background: #fff;
   box-shadow: 0 3px 25px #E7E8F0;
   border-radius: 5px;
+  -webkit-user-select: none;
+          user-select: none;
 }
 .ys-webrtc-sdk-ui .rtc-keyboard .keyboard-pop .item {
   margin-right: 11px;
