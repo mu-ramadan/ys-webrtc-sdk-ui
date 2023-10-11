@@ -17110,7 +17110,14 @@
   font-feature-settings: 'tnum';
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
+  -ms-overflow-style: 'scrollbar';
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.ys-webrtc-sdk-ui .ys-message-container {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 

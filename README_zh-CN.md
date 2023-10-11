@@ -85,6 +85,7 @@ init 函数需要两个参数 container和rtcOption。
 | hiddenIncomingComponent | boolean | 可选 | 隐藏来电弹屏组件 |
 | hiddenDialPanelComponent | boolean | 可选 | 隐藏拨号盘组件 |
 | disableCallWaiting | boolean | 可选 | 是否禁用callWaiting，为true时不使用pbx callWaiting值且只处理单通电话。|
+| intl | { local: string; messages: Record\<string, string\>} | 可选 | 多语言选项，可根据自身需要替换文案，message的键值可见下方详细描述。|
 
 ### Types
 
@@ -104,3 +105,46 @@ type SessionOption = {
 }
 ```
 
+### Intl
+
+- `local`：该属性用于标识当前正在使用的语言，例如：en、zh-CN、en-US。不可以使用下划线形式，例如：zh_cn、en_us。
+- `messages`：文案配置，键值对形式，键值可见下方详细描述。其中\{0\}表示占位符，会被替换为具体的值。
+	
+	```json
+  {
+      "common.cancel": "Cancel", // 取消操作提示文案
+      "common.confirm": "Confirm", // 确认操作提示文案
+      "dial_panel.input.placeholder": "Please input number", // "输入号码" 提示文案
+      "dial_panel.tip.connect_failed": "Failed to connect to server, you cannot initiate or answer a call. Trying to reconnect to the server.", //服务器连接失败提示文案
+      "incoming.btn.hang_up": "Hang up", // "挂断通话" 按钮文案
+      "incoming.btn.audio": "Audio", // 选择 "语音通话" 按钮文案
+      "session.calling": "Calling...", // "呼叫中" 文案
+      "session.ringing": "Ringing...", // "对方振铃中" 文案
+      "session.talking": "Talking...", // "通话中" 文案
+      "session.connecting": "Connecting...", // "连接中" 文案
+      "session.hang_up": "End Call", // "结束通话" 文案
+      "session.new_call": "New call", // "新呼叫" 文案
+      "session.record": "Record", // "录音" 文案
+      "session.mute": "Mute", // "静音通话" 文案
+      "session.hold": "Hold", // "保持通话" 文案
+      "session.resume": "Resume", // "恢复通话" 文案
+      "session.dialpad": "Dialpad", // "拨号键盘" 文案
+      "session.transfer": "Transfer", // "转接通话" 文案
+	    "session.attended_transfer": "Attended Transfer", // "咨询转接" 文案
+      "session.blind_transfer": "Blind Transfer", // "盲转接" 文案
+      "session.error.client_error": "Client Error: {0}", // "客户端异常" 文案。"{0}" 为占位符
+      "session.tip.recording": "Recording the Audio...", // "通话录音中" 文案
+      "session.tip.pause": "The recording is paused.", // "通话录音已暂停" 文案
+      "error.code_200": "Unknown Error.", // "未知错误" 提示文案
+      "error.code_202": "No available communication device found.(no permissions)", // "无权获取通话设备" 提示文案
+      "error.code_205": "Call failed. Cannot process more new calls now.", // "通话失败 (已达最大通话数)" 提示文案
+      "error.code_206": "No available communication device found.", // "无可用的通话设备" 提示文案
+      "error.code_207": "Attended Transfer Failed.", // "咨询转接失败" 提示文案 
+      "error.code_208": "Call failed. Called too many times.", // "通话失败 (已达呼出次数上限)" 提示文案
+      "error.code_209": "Call failed. Invalid Number.", // "通话失败 (无效号码)" 提示文案
+      "error.code_210": "Operation failed with pending calls.", // "有待处理来电，操作失败" 提示文案
+      "error.code_211": "Answer failed", // "接听来电失败" 提示文案
+      "error.code_290": "No available microphone found.", // "无可用的麦克风" 提示文案
+	    "error.code_291": "No available camera found." // "无可用的摄像头" 提示文案
+	}
+	```

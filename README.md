@@ -88,6 +88,7 @@ The `init` function requires two parameters:
 | hiddenIncomingComponent | boolean | No | Hide the 'incoming call component'. |
 | hiddenDialPanelComponent | boolean | No | Hide the 'dial panel component'. |
 | disableCallWaiting | boolean | No | Whether to disable call waiting. When setting this value to `true`, the PBX call waiting value does NOT take effect and PBX only handles single calls. |
+| intl | { local: string; messages: Record\<string, string\>} | No | Internationalization (multilingual) settings.<br>For more information, see [intl  (Internationalization) description](#intl-settings). |
 
 ### Types
 
@@ -107,4 +108,47 @@ type SessionOption = {
     class?: string;
 }
 ```
+
+### <a id="intl-settings">intl  (Internationalization) description</a>
+
+- `local`: Name of the current language, connected with a '**-**'. For example, `en-US` or `zh-CN`.
+- `messages`: Configurable text content, which is presented in key-value pairs. Refer to the following content for specific configuration items and their default values.
+	```json
+	{
+    "common.cancel": "Cancel",
+    "common.confirm": "Confirm",
+    "dial_panel.input.placeholder": "Please input number",
+    "dial_panel.tip.connect_failed": "Failed to connect to server, you cannot initiate or answer a call. Trying to reconnect to the server.",
+    "incoming.btn.hang_up": "Hang up",
+    "incoming.btn.audio": "Audio",
+    "session.calling": "Calling...",
+    "session.ringing": "Ringing...",
+    "session.talking": "Talking...",
+    "session.connecting": "Connecting...",
+    "session.hang_up": "End Call",
+    "session.new_call": "New call",
+    "session.record": "Record",
+    "session.mute": "Mute",
+    "session.hold": "Hold",
+    "session.resume": "Resume",
+    "session.dialpad": "Dialpad",
+    "session.transfer": "Transfer",
+    "session.attended_transfer": "Attended Transfer",
+	"session.blind_transfer": "Blind Transfer",
+    "session.error.client_error": "Client Error: {0}",
+    "session.tip.recording": "Recording the Audio...",
+    "session.tip.pause": "The recording is paused.",
+    "error.code_200": "Unknown Error.",
+    "error.code_202": "No available communication device found.(no permissions)",
+    "error.code_205": "Call failed. Cannot process more new calls now.",
+    "error.code_206": "No available communication device found.",
+    "error.code_207": "Attended Transfer Failed.",
+    "error.code_208": "Call failed. Called too many times.",
+    "error.code_209": "Call failed. Invalid Number.",
+    "error.code_210": "Operation failed with pending calls.",
+    "error.code_211": "Answer failed",
+    "error.code_290": "No available microphone found.",
+    "error.code_291": "No available camera found."
+	}
+	```
 
