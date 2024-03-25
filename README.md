@@ -17,6 +17,7 @@ npm install ys-webrtc-sdk-ui --save
 Initialize the Yeastar WebRTC SDK UI and render the UI components,
 ```js
 import { init } from 'ys-webrtc-sdk-ui';
+import 'ys-webrtc-sdk-ui/lib/ys-webrtc-sdk-ui.css';
 const container = document.getElementById('container');
 // Initialization
 init(container, {

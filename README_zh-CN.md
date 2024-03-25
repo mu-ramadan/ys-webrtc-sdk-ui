@@ -17,6 +17,7 @@ npm install ys-webrtc-sdk-ui --save
 初始化sdk，渲染UI组件。
 ```js
 import { init } from 'ys-webrtc-sdk-ui';
+import 'ys-webrtc-sdk-ui/lib/ys-webrtc-sdk-ui.css';
 const container = document.getElementById('container');
 // 初始化
 init(container, {
@@ -79,8 +80,8 @@ init 函数需要两个参数 container和rtcOption。
 | enableLog | boolean | 可选 | 是否开启日志输出以及错误日志上报至 PBX，默认开启。 |
 | reRegistryPhoneTimes | number | 可选 | 尝试重新连接 sip 服务次数，默认无限制。 |
 | deviceIds | { cameraId?: string; microphoneId?: string; speakerId:string; volume:number } | 可选 | 指定音视频输入设备 id，包含摄像头 id 、麦克风 id、扬声器 id；volume为通话、来电、拨号盘音量，音量范围0-1直接的浮点数，默认为0.6。 |
-| incomingOption | { style?: React.CSSProperties; class?: string;  } | 可选 | 调整Incoming组件层级 |
-| dialPanelOption | {  style?: React.CSSProperties; class?: string; } | 可选 | 调整Incoming组件层级 |
+| incomingOption | { style?: React.CSSProperties; class?: string;  } | 可选 | 调整Incoming组件样式 |
+| dialPanelOption | {  style?: React.CSSProperties; class?: string; } | 可选 | 调整DialPanel组件样式 |
 | sessionOption | [SessionOption](#session-option) | 可选 | 调整通话窗口组件位置和尺寸 |
 | hiddenIncomingComponent | boolean | 可选 | 隐藏来电弹屏组件 |
 | hiddenDialPanelComponent | boolean | 可选 | 隐藏拨号盘组件 |
